@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
     { name: "About", href: "#about" },
+    { name: "Journey", href: "#journey" },
     { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Education", href: "#education" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -35,14 +35,14 @@ export default function Navbar() {
         >
             <div className={cn(
                 "max-w-7xl mx-auto flex items-center justify-between px-8 py-3 rounded-2xl transition-all duration-300",
-                isScrolled ? "bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl" : "bg-transparent"
+                isScrolled ? "bg-white/80 backdrop-blur-xl border border-slate-200 shadow-lg" : "bg-transparent"
             )}>
                 <div className="flex items-center gap-2">
                     <div className="w-10 h-10 bg-sky-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-sky-600/20">
                         <Sparkles className="w-6 h-6" />
                     </div>
-                    <span className="text-xl font-bold text-white tracking-tighter">
-                        Ritika<span className="text-sky-400">.</span>
+                    <span className="text-xl font-bold text-slate-900 tracking-tighter">
+                        Ritika<span className="text-sky-500">.</span>
                     </span>
                 </div>
 
@@ -52,14 +52,14 @@ export default function Navbar() {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest"
+                            className="text-sm font-bold text-slate-500 hover:text-sky-600 transition-colors uppercase tracking-widest"
                         >
                             {link.name}
                         </a>
                     ))}
                     <a
                         href="#contact"
-                        className="px-6 py-2.5 bg-orange-500 text-white rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-orange-400 transition-all active:scale-95"
+                        className="px-6 py-2.5 bg-orange-500 text-white rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-orange-600 transition-all active:scale-95"
                     >
                         Hire Me
                     </a>
@@ -67,7 +67,7 @@ export default function Navbar() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-white"
+                    className="md:hidden text-slate-900"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X /> : <Menu />}
@@ -81,7 +81,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-6 right-6 mt-4 p-8 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] md:hidden shadow-3xl"
+                        className="absolute top-full left-6 right-6 mt-4 p-8 bg-white backdrop-blur-2xl border border-slate-200 rounded-[2.5rem] md:hidden shadow-2xl"
                     >
                         <div className="flex flex-col gap-6 text-center">
                             {navLinks.map((link) => (
@@ -89,7 +89,7 @@ export default function Navbar() {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-lg font-bold text-white uppercase tracking-widest"
+                                    className="text-lg font-bold text-slate-900 uppercase tracking-widest hover:text-sky-600"
                                 >
                                     {link.name}
                                 </a>
@@ -99,7 +99,7 @@ export default function Navbar() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="w-full py-4 bg-sky-600 text-white rounded-2xl font-bold uppercase tracking-widest"
                             >
-                                Get In Touch
+                                Hire Me
                             </a>
                         </div>
                     </motion.div>

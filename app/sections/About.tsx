@@ -6,7 +6,7 @@ import { Sparkles, Brain, MessageSquare, LineChart, TrendingUp } from "lucide-re
 
 export default function About() {
     return (
-        <section id="about" className="py-24 bg-[#09090B] relative overflow-hidden">
+        <section id="about" className="py-24 bg-sky-50 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <motion.div
@@ -14,27 +14,27 @@ export default function About() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-[10px] font-bold uppercase tracking-widest mb-6 border border-sky-500/20">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-sky-600 text-[10px] font-bold uppercase tracking-widest mb-6 border border-sky-200 shadow-sm">
                             <Sparkles className="w-3 h-3" /> Who I Am?
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">
-                            Bridging Creativity <br /> & <span className="text-orange-400">Analytics</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-sky-950 mb-8 leading-tight tracking-tight">
+                            Bridging Creativity <br /> & <span className="text-orange-500">Analytics</span>
                         </h2>
-                        <p className="text-slate-400 text-lg leading-relaxed mb-6">
+                        <p className="text-sky-900/70 text-lg leading-relaxed mb-6 font-medium">
                             I am a Digital Marketing and Brand Strategy professional with over 5 years of experience across international markets including the USA, Australia, and Nepal.
                         </p>
-                        <p className="text-slate-500 text-sm leading-relaxed mb-10">
+                        <p className="text-sky-800/60 text-sm leading-relaxed mb-10">
                             I specialize in coordinating creative projects and managing client communications. My mission is to develop content strategies that connect deep creativity with data-driven business outcomes.
                         </p>
 
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-2 gap-6 pb-8 border-b border-sky-100 mb-8">
                             <div>
-                                <div className="text-2xl font-bold text-white">15%</div>
-                                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Engagement Boost</div>
+                                <div className="text-2xl font-bold text-sky-950">15%</div>
+                                <div className="text-[10px] text-sky-600/40 font-bold uppercase tracking-widest">Engagement Boost</div>
                             </div>
                             <div>
-                                <div className="text-2xl font-bold text-white">35%</div>
-                                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Brand Visibility</div>
+                                <div className="text-2xl font-bold text-sky-950">35%</div>
+                                <div className="text-[10px] text-sky-600/40 font-bold uppercase tracking-widest">Brand Visibility</div>
                             </div>
                         </div>
                     </motion.div>
@@ -69,12 +69,12 @@ export default function About() {
 
 function HighlightCard({ icon: Icon, title, text }: { icon: any, title: string, text: string }) {
     return (
-        <div className="p-8 bg-white/5 border border-white/10 rounded-[2.5rem] hover:border-sky-500/30 transition-colors">
-            <div className="w-12 h-12 rounded-2xl bg-sky-500/10 flex items-center justify-center text-sky-400 mb-6">
-                <Icon className="w-6 h-6" />
+        <div className="p-8 bg-white border border-sky-100 rounded-[2.5rem] hover:border-sky-400 hover:shadow-xl hover:shadow-sky-400/5 transition-all">
+            <div className="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center text-sky-600 mb-6 font-bold">
+                <Icon className="w-6 h-6 outline-2" />
             </div>
-            <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-            <p className="text-slate-500 text-xs leading-relaxed">{text}</p>
+            <h3 className="text-lg font-bold text-sky-950 mb-2">{title}</h3>
+            <p className="text-sky-800/50 text-xs leading-relaxed font-medium">{text}</p>
         </div>
     );
 }

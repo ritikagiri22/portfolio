@@ -44,14 +44,14 @@ const pathSteps = [
 
 export default function PathSummary() {
     return (
-        <section className="py-20 bg-[#09090B] border-t border-white/5">
+        <section className="py-20 bg-sky-50 border-t border-sky-100">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
                     <div>
-                        <div className="text-[10px] font-bold text-sky-500 uppercase tracking-[0.3em] mb-4">The Evolution</div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-white">My Path in Digital Marketing</h2>
+                        <div className="text-[10px] font-bold text-sky-600 uppercase tracking-[0.3em] mb-4">The Evolution</div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-sky-950 tracking-tight">My Path in Digital Marketing</h2>
                     </div>
-                    <p className="text-slate-500 text-sm max-w-sm mb-1 leading-relaxed">
+                    <p className="text-sky-800/60 text-sm max-w-sm mb-1 leading-relaxed font-medium">
                         A strategic summary of my professional growth and academic foundation before you dive into the details.
                     </p>
                 </div>
@@ -64,15 +64,15 @@ export default function PathSummary() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className={`p-6 rounded-3xl border ${step.highlight ? 'bg-orange-500/10 border-orange-500/30' : 'bg-white/5 border-white/10'} hover:border-sky-500/30 transition-all group`}
+                            className={`p-6 rounded-3xl border ${step.highlight ? 'bg-orange-500/5 border-orange-500/20' : 'bg-white border-sky-100 shadow-sm'} hover:border-sky-400 hover:shadow-xl hover:shadow-sky-400/5 transition-all group`}
                         >
                             <div className="flex items-center justify-between mb-6">
-                                <span className={`text-2xl font-black ${step.highlight ? 'text-orange-400' : 'text-white/10 group-hover:text-sky-400/20'} transition-colors`}>{step.id}.</span>
-                                <step.icon className={`w-5 h-5 ${step.highlight ? 'text-orange-400' : 'text-sky-500'}`} />
+                                <span className={`text-2xl font-black ${step.highlight ? 'text-orange-500' : 'text-sky-100 group-hover:text-sky-200'} transition-colors`}>{step.id}.</span>
+                                <step.icon className={`w-5 h-5 ${step.highlight ? 'text-orange-500' : 'text-sky-500'}`} />
                             </div>
-                            <h3 className="text-white font-bold text-sm mb-1">{step.title}</h3>
-                            <div className="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-3">{step.period}</div>
-                            <p className="text-[11px] text-slate-400 leading-relaxed font-medium">
+                            <h3 className="text-sky-950 font-bold text-sm mb-1">{step.title}</h3>
+                            <div className="text-[9px] font-bold text-sky-600/40 uppercase tracking-widest mb-3">{step.period}</div>
+                            <p className="text-[11px] text-sky-800/60 leading-relaxed font-medium">
                                 {step.desc}
                             </p>
                         </motion.div>

@@ -4,25 +4,27 @@ import { motion } from "framer-motion";
 
 interface SkillBadgeProps {
     name: string;
-    level: number;
+    level: number; // 1-5
 }
 
 export default function SkillBadge({ name, level }: SkillBadgeProps) {
     return (
-        <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.03] border border-white/10 rounded-full hover:bg-white/[0.07] hover:border-sky-500/30 transition-all cursor-default"
-        >
-            <span className="text-sm font-bold text-slate-300 group-hover:text-white">{name}</span>
-            <div className="flex gap-1.5">
-                {[...Array(5)].map((_, i) => (
-                    <div
+        <div className="px-4 py-2 bg-white border border-slate-200 rounded-xl flex items-center gap-3 hover:border-sky-500 transition-all shadow-sm group">
+            <span className="text-xs font-bold text-slate-700 group-hover:text-sky-600 transition-colors">{name}</span>
+            <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((i) => (
+                    <motion.div
                         key={i}
-                        className={`w-1.5 h-1.5 rounded-full ${i < level ? "bg-orange-500 shadow-[0_0_5px_rgba(249,115,22,0.8)]" : "bg-white/10"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: i * 0.05 }}
+                        className={`w-1.5 h-1.5 rounded-full transition-colors ${i <= level
+                                ? "bg-orange-500 shadow-[0_0_5px_rgba(249,115,22,0.3)]"
+                                : "bg-slate-200"
                             }`}
                     />
                 ))}
             </div>
-        </motion.div>
+        </div>
     );
 }

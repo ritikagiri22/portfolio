@@ -1,46 +1,50 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0EA5E9;
-  /* Sky Blue */
-  --color-secondary: #F97316;
-  /* Orange */
-  --color-accent: #0F172A;
-  /* Deep Black/Blue */
-  --color-background: #09090B;
-  /* Near Black */
-  --color-foreground: #F8FAFC;
-  /* Light Gray/White */
-
-  --font-heading: var(--font-geist-sans);
+  --color-sky-400: #38bdf8;
+  --color-sky-500: #0ea5e9;
+  --color-sky-600: #0284c7;
+  --color-sky-700: #0369a1;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
 }
 
 :root {
-  --background: #09090b;
-  --foreground: #f8fafc;
-  --primary: #0ea5e9;
-  --secondary: #f97316;
-  --accent: #1e293b;
+  --background: #f0f9ff;
+  /* Mid Sky Blueish (Sky 50) */
+  --foreground: #0c4a6e;
+  /* Deep Sky Blue Text (Sky 900) */
+  --card: #ffffff;
+  --card-border: #bae6fd;
+  /* Sky 200 */
+  --accent-sky: #0ea5e9;
+  --accent-orange: #f97316;
+  --text-muted: #64748b;
+  --glass-bg: rgba(240, 249, 255, 0.7);
+  --glass-border: rgba(186, 230, 253, 0.3);
 }
 
-@layer base {
-  body {
-    @apply bg-[var(--background)] text-[var(--foreground)];
-  }
-}
-
-.glass-card {
-  @apply bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+body {
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-sky-300 to-orange-400;
+  background: linear-gradient(to right, var(--accent-sky), var(--accent-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.bg-orange-gradient {
-  @apply bg-gradient-to-r from-orange-500 to-orange-400;
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
 }
 
-.bg-sky-gradient {
-  @apply bg-gradient-to-r from-sky-600 to-sky-400;
+@layer base {
+  * {
+    @apply border-sky-100;
+  }
 }

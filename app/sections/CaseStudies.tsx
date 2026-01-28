@@ -6,11 +6,11 @@ import { caseStudies } from "@/data/caseStudies";
 
 export default function CaseStudies() {
     return (
-        <section id="projects" className="py-24 bg-[#09090B]">
+        <section id="projects" className="py-24 bg-sky-100/20">
             <div className="max-w-6xl mx-auto px-4">
                 <SectionHeader
-                    title="Impact & Results"
-                    subtitle="I focus on quantifiable outcomes that demonstrate the bridge between creative strategy and business growth."
+                    title="Selected Case Studies"
+                    subtitle="Deep dives into how I've solved business problems through strategic storytelling and creative operations."
                 />
 
                 <div className="grid md:grid-cols-2 gap-8 mt-16">

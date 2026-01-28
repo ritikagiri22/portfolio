@@ -19,16 +19,16 @@ export default function SectionHeader({ title, subtitle, className }: SectionHea
                 viewport={{ once: true }}
                 className="flex items-center gap-2.5 mb-5"
             >
-                <div className="w-10 h-[1px] bg-orange-500/40" />
-                <Sparkles className="w-3.5 h-3.5 text-orange-400" />
-                <div className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.3em]">Ritika Giri</div>
+                <div className="w-10 h-[2px] bg-orange-500/30" />
+                <Sparkles className="w-3.5 h-3.5 text-orange-500" />
+                <div className="text-[10px] font-bold text-sky-600/40 uppercase tracking-[0.3em]">Ritika Giri</div>
             </motion.div>
 
             <motion.h2
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight leading-tight"
+                className="text-3xl md:text-5xl font-bold text-sky-950 mb-6 tracking-tight leading-tight"
             >
                 {title}
             </motion.h2>
@@ -38,7 +38,7 @@ export default function SectionHeader({ title, subtitle, className }: SectionHea
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.15 }}
-                    className="text-slate-400 max-w-2xl text-base md:text-lg leading-relaxed font-medium"
+                    className="text-sky-900/60 max-w-2xl text-base md:text-lg leading-relaxed font-medium"
                 >
                     {subtitle}
                 </motion.p>

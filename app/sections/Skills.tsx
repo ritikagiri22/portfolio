@@ -8,7 +8,7 @@ import { Sparkles } from "lucide-react";
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 bg-[#09090B]">
+        <section id="skills" className="py-24 bg-sky-50">
             <div className="max-w-7xl mx-auto px-4">
                 <SectionHeader
                     title="The Technical Toolbox"
@@ -23,13 +23,13 @@ export default function Skills() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="p-10 rounded-[3rem] bg-white/5 border border-white/10 hover:border-orange-500/20 transition-all hover:shadow-2xl hover:shadow-orange-500/5 group"
+                            className="p-10 rounded-[3rem] bg-white border border-sky-100 hover:border-sky-400 transition-all hover:shadow-2xl hover:shadow-sky-400/5 group"
                         >
-                            <div className="flex items-center gap-3 mb-10 border-b border-white/5 pb-6">
-                                <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 group-hover:text-orange-300 transition-colors">
+                            <div className="flex items-center gap-3 mb-10 border-b border-sky-50 pb-6 transition-colors group-hover:border-sky-200">
+                                <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-600 group-hover:text-orange-700 transition-colors font-bold">
                                     <Sparkles className="w-5 h-5" />
                                 </div>
-                                <h3 className="text-xl font-bold text-white uppercase tracking-widest">
+                                <h3 className="text-xl font-bold text-sky-950 uppercase tracking-widest">
                                     {category.category}
                                 </h3>
                             </div>
@@ -47,11 +47,11 @@ export default function Skills() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-20 p-12 bg-gradient-to-r from-sky-900 to-[#09090B] border border-sky-500/20 rounded-[3rem] text-center relative overflow-hidden"
+                    className="mt-20 p-12 bg-white border border-sky-200 rounded-[3rem] text-center relative overflow-hidden shadow-sm shadow-sky-400/5"
                 >
                     <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/5 rounded-full blur-[80px] -mr-32 -mt-32" />
-                    <h3 className="text-2xl font-bold text-white mb-4">Driving Future Growth with AI</h3>
-                    <p className="text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    <h3 className="text-2xl font-bold text-sky-950 mb-4 tracking-tight">Driving Future Growth with AI</h3>
+                    <p className="text-sky-800/60 max-w-2xl mx-auto leading-relaxed font-medium">
                         Currently leveraging AI-powered marketing tools and predictive analytics to innovate beyond traditional strategies, ensuring brand resonance in an evolving digital landscape.
                     </p>
                 </motion.div>

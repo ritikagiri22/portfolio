@@ -27,7 +27,7 @@ export default function RootLayout({
     return (
         <html lang="en" className="scroll-smooth">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#09090B] text-slate-200`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased bg-sky-50 text-sky-950`}
             >
                 <Navbar />
                 {children}
