@@ -3,8 +3,8 @@ export const AUTHOR = "Ritika Giri";
 export const ROLE = "Digital Marketer | Brand Strategist";
 
 export const SOCIAL_LINKS = {
-    linkedin: "https://linkedin.com/in/ritika-giri",
-    instagram: "https://instagram.com/ritika.giri",
+    linkedin: "https://www.linkedin.com/in/ritikagirii/",
+    instagram: "https://www.instagram.com/ritikagirii/",
 };
 
-export const CONTACT_EMAIL = "ritika@example.com";
+export const CONTACT_EMAIL = "giriritika122@gmail.com";

@@ -29,7 +29,7 @@ export default function Contact() {
         <section className="py-24 bg-sky-50" id="contact">
             <div className="max-w-7xl mx-auto px-4">
                 <SectionHeader
-                    title="Ready to Partner?"
+                    title="Lets Collaborate?"
                     subtitle="I'm always open to discussing new brand strategies, creative operations, or exciting marketing opportunities."
                 />
 
@@ -54,7 +54,7 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <div className="text-[10px] text-white/50 font-bold uppercase tracking-widest mb-0.5">Email Me</div>
-                                        <div className="font-bold text-lg">hello@ritikagiri.com</div>
+                                        <div className="font-bold text-lg">giriritika122@gmail.com</div>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-6 group">
@@ -69,8 +69,8 @@ export default function Contact() {
                             </div>
 
                             <div className="flex gap-4">
-                                <SocialLink icon={Linkedin} href="https://linkedin.com/in/ritikaofficial" />
-                                <SocialLink icon={Instagram} href="#" />
+                                <SocialLink icon={Linkedin} href="https://www.linkedin.com/in/ritikagirii/" />
+                                <SocialLink icon={Instagram} href="https://www.instagram.com/ritikagirii/" />
                             </div>
                         </div>
                     </motion.div>

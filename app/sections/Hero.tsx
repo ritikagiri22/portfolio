@@ -67,12 +67,11 @@ export default function Hero() {
                             <div className="text-[10px] text-sky-600/60 font-bold uppercase tracking-widest mt-1">Years Exp.</div>
                         </div>
                         <div>
-                            <div className="text-2xl font-bold text-sky-950">10+</div>
+                            <div className="text-2xl font-bold text-sky-950">15+</div>
                             <div className="text-[10px] text-sky-600/60 font-bold uppercase tracking-widest mt-1">Key Clients</div>
                         </div>
                         <div>
-                            <div className="text-2xl font-bold text-sky-950">30%</div>
-                            <div className="text-[10px] text-sky-600/60 font-bold uppercase tracking-widest mt-1">Growth Driven</div>
+
                         </div>
                     </div>
                 </motion.div>

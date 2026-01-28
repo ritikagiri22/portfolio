@@ -21,7 +21,7 @@ export default function BrandJourney() {
                             <span className="text-sky-600">Organizing Chaos</span>
                         </h2>
                         <p className="text-sky-900/70 text-lg leading-relaxed mb-8 font-medium">
-                            I bring structure, intention, and aesthetic thinking into everything I do. I’m a digitally driven storyteller who turns ideas into meaningful visual experiences.
+                            I bring clarity, structure, and intention to complex marketing challenges. I’m a digitally driven marketer who transforms ideas into brand strategies and stories that connect, perform, and convert.
                         </p>
 
                         <a
