@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0EA5E9;
+  /* Sky Blue */
+  --color-secondary: #F97316;
+  /* Orange */
+  --color-accent: #0F172A;
+  /* Deep Black/Blue */
+  --color-background: #09090B;
+  /* Near Black */
+  --color-foreground: #F8FAFC;
+  /* Light Gray/White */
+
+  --font-heading: var(--font-geist-sans);
+}
+
+:root {
+  --background: #09090b;
+  --foreground: #f8fafc;
+  --primary: #0ea5e9;
+  --secondary: #f97316;
+  --accent: #1e293b;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)];
+  }
+}
+
+.glass-card {
+  @apply bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-sky-300 to-orange-400;
+}
+
+.bg-orange-gradient {
+  @apply bg-gradient-to-r from-orange-500 to-orange-400;
+}
+
+.bg-sky-gradient {
+  @apply bg-gradient-to-r from-sky-600 to-sky-400;
+}
