@@ -5,19 +5,27 @@ import path from "path";
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const mode = searchParams.get("mode"); // "download" or "preview"
+    const type = searchParams.get("type"); // "cv" or "portfolio"
 
-    const filename = "Resume of Ritika Giri.pdf";
+    let filename = "Resume of Ritika Giri.pdf";
+    let downloadName = "Ritika_Giri_CV.pdf";
+
+    if (type === "portfolio") {
+        filename = "entireWork.pdf";
+        downloadName = "Ritika_Giri_Visual_Portfolio.pdf";
+    }
+
     const filePath = path.join(process.cwd(), "public/resume", filename);
 
     if (!fs.existsSync(filePath)) {
         return NextResponse.json({
-            error: "CV not found. Expected at public/resume/Resume of Ritika Giri.pdf"
+            error: `File not found: ${filename}`
         }, { status: 404 });
     }
 
     const fileBuffer = fs.readFileSync(filePath);
     const contentDisposition = mode === "download"
-        ? `attachment; filename="Ritika_Giri_CV.pdf"`
+        ? `attachment; filename="${downloadName}"`
         : "inline";
 
     return new NextResponse(fileBuffer, {
